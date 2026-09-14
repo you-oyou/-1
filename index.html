@@ -12,7 +12,34 @@
         .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
         section { background: #fff; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         h2 { border-bottom: 2px solid #eaeaea; padding-bottom: 10px; color: #24292e; }
-        .project-item { border-left: 4px solid #0366d6; padding-left: 15px; margin: 20px 0; }
+        
+        /* 作品卡片樣式 */
+        .project-item { 
+            border-left: 4px solid #0366d6; 
+            padding-left: 15px; 
+            margin: 20px 0; 
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-item.clickable {
+            cursor: pointer;
+            padding: 15px;
+            background: #fafbfc;
+            border-radius: 0 8px 8px 0;
+        }
+        .project-item.clickable:hover {
+            transform: translateX(5px);
+            background: #f1f8ff;
+        }
+        .project-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .project-item h3 {
+            margin-top: 0;
+            color: #0366d6;
+        }
+
         footer { text-align: center; padding: 20px; color: #666; font-size: 0.9rem; }
     </style>
 </head>
@@ -30,7 +57,16 @@
         </section>
 
         <section>
-            <h2>精选作品</h2>
+            <h2>精選作品</h2>
+            
+            <!-- 新增的數位科技概論作業卡片 -->
+            <div class="project-item clickable">
+                <a href="tech-hw.html">
+                    <h3>數位科技概論作業</h3>
+                    <p>記錄數位科技概論課程的各項作業、報告與心得分享。點擊檢視詳細內容 &rarr;</p>
+                </a>
+            </div>
+
             <div class="project-item">
                 <h3>作品一：期末專題名稱</h3>
                 <p>這是使用 HTML/CSS 製作的響應式網頁，展示了基礎的排版與互動設計。</p>
